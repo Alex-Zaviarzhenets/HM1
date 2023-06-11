@@ -1,0 +1,76 @@
+HOME WORK ZAVIARZHENETS ALIAKSEI 08.06.2023
+
+
+PARTIE 1
+
+
+
+package HOMEWORK;
+
+
+public class homework0806 {
+    public static void main(String[] args) {
+
+        // x - это число П 3.14
+        double x = 3.14, r1 = 24, r2 = 28, q = 40;
+
+        // формула для вычесления лишних колорий
+        double result1 = ((x * Math.pow(r1, 2)) - (x * Math.pow(r2, 2)) * q);
+        HM080623 s1 = new HM080623(x, (int) r1, (int) r2, q);
+    }
+}
+
+
+
+
+PARTIE 2
+
+
+package HOMEWORK;
+
+public class HM080623 {
+
+
+    private double q, result1, result2, result3, result4, result5, result6, x;
+    private int r1, r2;
+
+
+    public HM080623(double x, int r1, int r2, double q) {
+        this.x = x;
+        this.r1 = r1;
+        this.r2 = r2;
+        this.q = q;
+        action1();
+        action2();
+        action3();
+        action4();
+        action5();
+        action6();
+        printResult();
+
+    }
+    private void action1() {
+        result1 = Math.pow(r1, 2);
+    }
+    private void action2() {
+        result2 = Math.pow(r2, 2);
+    }
+    private void action3() {
+        result3 = (x * result2);
+    }
+    private void action4() {
+        result4 = (x * result1);
+    }
+    private void action5() {
+        result5 = (result3 - result4);
+    }
+    private void action6() {
+        result6 = q * result5;
+    }
+    public void printResult() {
+        System.out.println(result6);
+    }
+
+}
+
+;
